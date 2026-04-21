@@ -536,6 +536,56 @@
     .footer__logo .logo::after { font-size: 10px; top: 1px; right: 4px; }
     .footer__logo .brand { font-size: 17px; }
     .footer p { margin: 0; }
+    /* Botão de forçar atualização — discreto, no rodapé */
+    .footer__update {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      border: 1px solid rgba(201, 166, 70, 0.35);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-refresh:hover {
+      border-color: var(--gold);
+      background: rgba(201, 166, 70, 0.08);
+    }
+    .btn-refresh:active { transform: scale(0.97); }
+    .btn-refresh:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+    .btn-refresh__icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      transition: transform 0.6s ease;
+    }
+    .btn-refresh.is-loading .btn-refresh__icon {
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .footer__version {
+      font-size: 11px;
+      color: var(--text-dim);
+      opacity: 0.6;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.4px;
+    }
 
     /* ---------------------------------------------------------------
        EMPTY STATE
@@ -617,6 +667,17 @@
       Informações coletadas de fontes públicas. Restaurantes sem vínculo comercial oficial com a plataforma.
       Dono do estabelecimento? Reivindique seu perfil.
     </p>
+    <div class="footer__update">
+      <button type="button" class="btn-refresh" id="btn-refresh" aria-label="Forçar atualização do app">
+        <svg class="btn-refresh__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        <span id="btn-refresh-label">Atualizar para última versão</span>
+      </button>
+      <span class="footer__version" id="footer-version">v1.0.3</span>
+    </div>
   </footer>
 
   <script>
@@ -646,6 +707,7 @@
       await carregarDados();
       renderizar();
       registrarSW();
+      configurarAtualizacao();
     });
 
     // Substitui texto da marca caso BRAND mude
@@ -853,6 +915,56 @@
       if ("serviceWorker" in navigator && location.protocol !== "file:") {
         navigator.serviceWorker.register("sw.js").catch(() => {});
       }
+    }
+
+    // ---------------------------------------------------------------
+    // BOTÃO "ATUALIZAR VERSÃO"
+    // Limpa caches do PWA + desregistra SW + recarrega.
+    // Útil quando o sw.js versionou mas o cliente continua com a antiga.
+    // ---------------------------------------------------------------
+    async function configurarAtualizacao() {
+      const btn   = document.getElementById("btn-refresh");
+      const label = document.getElementById("btn-refresh-label");
+      const verEl = document.getElementById("footer-version");
+      if (!btn) return;
+
+      // Exibe a versão real que o SW está servindo (lido do Cache Storage)
+      try {
+        if ("caches" in window) {
+          const chaves = await caches.keys();
+          const atual = chaves.find((k) => k.startsWith("eatprime-"));
+          if (atual && verEl) verEl.textContent = atual.replace("eatprime-", "");
+        }
+      } catch (_) { /* silencioso */ }
+
+      btn.addEventListener("click", async () => {
+        if (btn.disabled) return;
+        btn.disabled = true;
+        btn.classList.add("is-loading");
+        label.textContent = "Atualizando…";
+
+        try {
+          // 1) Limpa todos os caches do PWA
+          if ("caches" in window) {
+            const chaves = await caches.keys();
+            await Promise.all(chaves.map((k) => caches.delete(k)));
+          }
+          // 2) Desregistra todos os service workers deste escopo
+          if ("serviceWorker" in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            await Promise.all(regs.map((r) => r.unregister()));
+          }
+        } catch (e) {
+          console.warn("[EatPrime] falha ao limpar cache/SW:", e);
+        }
+
+        // 3) Reload forçado (bypass HTTP cache onde suportado)
+        if (typeof location.reload === "function") {
+          try { location.reload(true); } catch (_) { location.reload(); }
+        } else {
+          location.href = location.href;
+        }
+      });
     }
   </script>
 </body>
