@@ -3,7 +3,7 @@
 // IMPORTANTE: incremente CACHE_VERSION toda vez que você publicar uma mudança,
 // senão o usuário fica preso numa versão antiga.
 
-const CACHE_VERSION = "eatprime-v1.0.2";
+const CACHE_VERSION = "eatprime-v1.0.3";
 const OFFLINE_URL = "./offline.html";
 const CORE_ASSETS = [
   "./",
@@ -14,6 +14,8 @@ const CORE_ASSETS = [
   "./restaurantes_dados.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./icons/favicon.svg",
+  "./icons/logo.svg",
 ];
 
 // INSTALL — faz pré-cache dos assets essenciais

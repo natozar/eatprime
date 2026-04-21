@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="EatPrime">
+  <!-- Fundo -->
+  <rect width="512" height="512" rx="96" fill="#0b0b0f"/>
+  <!-- Selo interno sutil -->
+  <rect x="28" y="28" width="456" height="456" rx="72" fill="none" stroke="#c9a646" stroke-width="1.5" opacity="0.35"/>
+  <!-- E em serifa italic dourado (Fraunces se disponível, senão Georgia) -->
+  <text x="232" y="360" text-anchor="middle"
+        font-family="'Fraunces', Georgia, 'Times New Roman', serif"
+        font-size="340" font-weight="700" font-style="italic"
+        fill="#c9a646">E</text>
+  <!-- Prime mark (′) em dourado como sobrescrito -->
+  <text x="360" y="200" text-anchor="middle"
+        font-family="'Fraunces', Georgia, 'Times New Roman', serif"
+        font-size="120" font-weight="700"
+        fill="#c9a646">′</text>
+</svg>

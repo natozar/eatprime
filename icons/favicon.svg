@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EatPrime">
+  <rect width="64" height="64" rx="11" fill="#0b0b0f"/>
+  <text x="28" y="46" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="46" font-weight="700" font-style="italic"
+        fill="#c9a646">E</text>
+  <text x="46" y="22" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="20" font-weight="700"
+        fill="#c9a646">′</text>
+</svg>

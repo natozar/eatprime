@@ -10,8 +10,10 @@
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+  <link rel="alternate icon" href="icons/icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="mask-icon" href="icons/favicon.svg" color="#c9a646" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="EatPrime" />
@@ -20,7 +22,7 @@
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ---------------------------------------------------------------
@@ -97,18 +99,34 @@
       gap: 14px;
     }
     .logo {
+      position: relative;
       width: 40px;
       height: 40px;
       border-radius: 8px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+      background: var(--bg);
+      border: 1.5px solid rgba(201, 166, 70, 0.45);
       display: grid;
       place-items: center;
       font-family: 'Fraunces', serif;
+      font-style: italic;
       font-weight: 700;
-      font-size: 22px;
-      color: var(--bg);
+      font-size: 26px;
+      color: var(--gold);
+      line-height: 1;
       letter-spacing: -0.02em;
-      box-shadow: 0 4px 14px rgba(201, 166, 70, 0.25);
+      box-shadow: 0 4px 14px rgba(201, 166, 70, 0.18);
+    }
+    /* Prime mark (′) como sobrescrito — assinatura da marca */
+    .logo::after {
+      content: "′";
+      position: absolute;
+      top: 2px;
+      right: 6px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--gold);
+      line-height: 1;
     }
     .brand {
       font-family: 'Fraunces', serif;
@@ -514,7 +532,8 @@
       gap: 10px;
       margin-bottom: 14px;
     }
-    .footer__logo .logo { width: 28px; height: 28px; font-size: 16px; }
+    .footer__logo .logo { width: 28px; height: 28px; font-size: 18px; border-width: 1px; }
+    .footer__logo .logo::after { font-size: 10px; top: 1px; right: 4px; }
     .footer__logo .brand { font-size: 17px; }
     .footer p { margin: 0; }
 
