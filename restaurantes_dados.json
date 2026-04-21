@@ -1,0 +1,246 @@
+{
+  "versao": "1.1.0-navegador",
+  "gerado_em": "2026-04-21T17:12:14",
+  "fonte": "Extensão do Claude no navegador (Google Maps + Instagram + Unsplash/Pexels)",
+  "cidade": "Ribeirão Preto - SP",
+  "restaurantes": [
+    {
+      "id": 1,
+      "nome": "Gran Steak",
+      "endereco": "Av. Itatiaia, 1435, Jardim Sumaré, Ribeirão Preto, SP",
+      "area": "Jardim Sumaré",
+      "prato": "Prime Rib",
+      "tag": "Carnes",
+      "cuisine": "Steakhouse",
+      "desc": "Corte nobre de costela bovina assada por horas em baixa temperatura, fatiada na hora. Servida com acompanhamentos clássicos da casa — macia como manteiga, com crosta dourada e suculência que marca a refeição.",
+      "whatsapp": "551639119009",
+      "whatsapp_verificado": true,
+      "google_rating": 4.8,
+      "google_reviews": 5437,
+      "google_maps_uri": "https://www.google.com/maps/place/Gran+Steak/@-21.1946873,-47.8114582,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bed96fa264a3:0x40ea9153e2d0cb6a!8m2!3d-21.1946873!4d-47.8088833!16s%2Fg%2F11bxdvf9td",
+      "fotos": [
+        "fotos/rest_01_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Emerson Vieira",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/pessoa-fazendo-churrasco-de-carne-_aR4l6fj6wQ"
+      },
+      "_observacao_levantamento": "WhatsApp usa número fixo (16) 3911-9009 via WhatsApp Business, confirmado por link wa.me/551639119009 no Instagram oficial @gransteakribeirao."
+    },
+    {
+      "id": 2,
+      "nome": "Varanda da Picanha",
+      "endereco": "R. Floriano Peixoto, 40, Centro, Ribeirão Preto, SP",
+      "area": "Centro",
+      "prato": "Picanha Grelhada",
+      "tag": "Carnes",
+      "cuisine": "Churrascaria",
+      "desc": "Picanha selecionada grelhada no ponto, com crosta caramelizada e interior rosado. Acompanha arroz carreteiro de defumados e mandioca frita crocante — clássico do interior paulista bem executado.",
+      "whatsapp": "5516982194644",
+      "whatsapp_verificado": true,
+      "google_rating": 4.7,
+      "google_reviews": 3461,
+      "google_maps_uri": "https://www.google.com/maps/place/Varanda+da+Picanha/@-21.1792346,-47.8037398,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bf1d1c3e2425:0xc78935c94cc048a7!8m2!3d-21.1792346!4d-47.8011649!16s%2Fg%2F11bbrlc7l0",
+      "fotos": [
+        "fotos/rest_02_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Justus Menke",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/bolo-de-chocolate-marrom-e-preto-62XLglIrTJc"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Latulia Restaurante e Costelaria",
+      "endereco": "Av. Sen. César Vergueiro, 1156, Jardim São Luiz, Ribeirão Preto, SP",
+      "area": "Jardim São Luiz",
+      "prato": "Costela no Bafo",
+      "tag": "Carnes",
+      "cuisine": "Costelaria",
+      "desc": "Costela bovina assada lentamente durante horas em forno fechado, para máxima suculência e sabor defumado. Desmancha no garfo, com crosta dourada — um clássico que exige tempo e paciência na cozinha.",
+      "whatsapp": "5516982386530",
+      "whatsapp_verificado": true,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": "https://www.google.com/maps/place/Latulia+Restaurante+e+Costelaria/@-21.2023905,-47.8101123,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bed6c7794097:0x8b6ffaeba7925651!8m2!3d-21.2023905!4d-47.8075374!16s%2Fg%2F1q5gpzl_c",
+      "fotos": [
+        "fotos/rest_03_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Alexandru-Bogdan Ghita",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/costela-assada-com-tomates-fatiados-e-batatas-UeYkqQh4PoI"
+      },
+      "_observacao_levantamento": "Ficha no Google Maps não exibe rating/estrelas nem contagem de avaliações."
+    },
+    {
+      "id": 4,
+      "nome": "Amici Di Tullio",
+      "endereco": "R. Olavo Bilac, 1280, Jardim Sumaré, Ribeirão Preto, SP",
+      "area": "Jardim Sumaré",
+      "prato": "Tagliolini al Tartufo",
+      "tag": "Italiana",
+      "cuisine": "Italiana",
+      "desc": "Massa fresca artesanal cortada fina, envolvida em molho cremoso de manteiga, queijo parmesão e trufas negras frescas raladas na hora. Aroma marcante, sabor profundo — uma das maiores expressões da cozinha italiana clássica.",
+      "whatsapp": "5516997241628",
+      "whatsapp_verificado": false,
+      "google_rating": 4.7,
+      "google_reviews": 1236,
+      "google_maps_uri": "https://www.google.com/maps/place/Amici+Di+Tullio/@-21.19041,-47.8106302,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bede0b0167b1:0xfef9d3ce41e9027e!8m2!3d-21.19041!4d-47.8080553!16s%2Fg%2F11b7g0db8y",
+      "fotos": [
+        "fotos/rest_04_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Meg von Haartman",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/prato-de-massa-com-molho-ervas-e-enfeite-q2F-xP_CrwA"
+      },
+      "_observacao_levantamento": "Sem celular WhatsApp. Grupo Di Tullio usa fixo (16) 3235-9610."
+    },
+    {
+      "id": 5,
+      "nome": "La Cucina di Tullio Santini",
+      "endereco": "Av. Antônio Diederichsen, 485, Jardim São Luiz, Ribeirão Preto, SP",
+      "area": "Jardim São Luiz",
+      "prato": "Ossobuco com Polenta",
+      "tag": "Italiana",
+      "cuisine": "Italiana",
+      "desc": "Jarrete de vitelo cozido lentamente em vinho tinto e legumes até desmanchar. Servido sobre polenta cremosa feita na hora, finalizado com gremolata de limão siciliano. Prato de domingo em família, com apresentação de alta gastronomia.",
+      "whatsapp": "5516362363610",
+      "whatsapp_verificado": false,
+      "google_rating": 4.7,
+      "google_reviews": 1122,
+      "google_maps_uri": "https://www.google.com/maps/place/La+Cucina+di+Tullio+Santini/@-21.1941976,-47.8045445,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bf276d5860f1:0x422c29698723552a!8m2!3d-21.1941976!4d-47.8019696!16s%2Fg%2F1q69jn23n",
+      "fotos": [
+        "fotos/rest_05_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Jonathan Borba",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/comida-cozida-na-placa-de-ceramica-branca-x_ObRUc51S0"
+      },
+      "_observacao_levantamento": "Sem celular WhatsApp. Telefone fixo: (16) 3623-6361."
+    },
+    {
+      "id": 6,
+      "nome": "Restaurante Ancho Di Tullio",
+      "endereco": "Av. José Adolfo Bianco Molina, 2595, Jardim Canadá, Ribeirão Preto, SP",
+      "area": "Jardim Canadá",
+      "prato": "Bife Ancho",
+      "tag": "Carnes",
+      "cuisine": "Contemporânea",
+      "desc": "Corte nobre argentino de entrecôte, grelhado em brasa no ponto exato. Acompanhado de risoto cremoso de limão siciliano com azeite trufado. Combinação de carne com frescor cítrico que ganhou a mesa dos ribeirãopretanos exigentes.",
+      "whatsapp": "5516361097940",
+      "whatsapp_verificado": false,
+      "google_rating": 4.6,
+      "google_reviews": 467,
+      "google_maps_uri": "https://www.google.com/maps/place/Restaurante+Ancho+Di+Tullio/@-21.210892,-47.8136745,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9b9298749d3a9:0x7fdd088d4fe1caa7!8m2!3d-21.210892!4d-47.8110996!16s%2Fg%2F11h10d_m3",
+      "fotos": [
+        "fotos/rest_06_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Mohamed Olwy",
+        "fonte": "Pexels",
+        "url": "https://www.pexels.com/photo/grilled-ribeye-steak-on-wooden-cutting-board-36782574/"
+      },
+      "_observacao_levantamento": "Foto via Pexels. Sem WhatsApp celular; fixo (16) 3610-9794."
+    },
+    {
+      "id": 7,
+      "nome": "Restaurante Bello Di Tullio",
+      "endereco": "R. Bernardo Alves Pereira, 92, Jardim Canadá, Ribeirão Preto, SP",
+      "area": "Jardim Canadá",
+      "prato": "Fettuccine 4 Formaggi",
+      "tag": "Italiana",
+      "cuisine": "Italiana",
+      "desc": "Fettuccine fresca envolvido em molho cremoso de quatro queijos selecionados — gorgonzola, parmesão, provolone e catupiry. Intenso, reconfortante, com equilíbrio entre acidez e untuosidade. Pedido clássico da casa.",
+      "whatsapp": "5516361042490",
+      "whatsapp_verificado": false,
+      "google_rating": 4.6,
+      "google_reviews": 912,
+      "google_maps_uri": "https://www.google.com/maps/place/Restaurante+Bello+Di+Tullio/@-21.2110336,-47.8136506,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9b92d19867343:0xf2ae9bec6a9bf997!8m2!3d-21.2110336!4d-47.8110757!16s%2Fg%2F11c3_9mnmz",
+      "fotos": [
+        "fotos/rest_07_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Bruna Branco",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/macarrao-no-prato-com-garfo-t8hTmte4O_g"
+      },
+      "_observacao_levantamento": "Sem celular WhatsApp; fixo (16) 3610-4249."
+    },
+    {
+      "id": 8,
+      "nome": "Rubinho Bar e Restaurante",
+      "endereco": "R. Henrique Dumont, 1326, Jardim Paulista, Ribeirão Preto, SP",
+      "area": "Jardim Paulista",
+      "prato": "Sardinhas Assadas",
+      "tag": "Peixes",
+      "cuisine": "Brasileira",
+      "desc": "Sardinhas frescas assadas na brasa com sal grosso, limão e fio de azeite. Acompanha arroz branco soltinho, farofa crocante e vinagrete — simplicidade refinada do litoral trazida para o interior paulista.",
+      "whatsapp": "5516342165670",
+      "whatsapp_verificado": false,
+      "google_rating": 4.7,
+      "google_reviews": 847,
+      "google_maps_uri": "https://www.google.com/maps/place/Rubinho+Bar+e+Restaurante/@-21.1836884,-47.7946091,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bf17c1f8539d:0x805d228c77644155!8m2!3d-21.1836884!4d-47.7920342!16s%2Fg%2F11ggvtq2x0",
+      "fotos": [
+        "fotos/rest_08_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Karolina Grabowska",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/peixe-grelhado-com-salada-de-legumes-no-prato-de-ceramica-branca-N8-bMqUMS8g"
+      },
+      "_observacao_levantamento": "Rubinho usa fixo como WA Business. Retornado null."
+    },
+    {
+      "id": 9,
+      "nome": "Picanha e Peixe na Brasa",
+      "endereco": "R. Guarujá, 530, Jardim Paulistano, Ribeirão Preto, SP",
+      "area": "Jardim Paulistano",
+      "prato": "Filé à Parmegiana",
+      "tag": "Carnes",
+      "cuisine": "Brasileira",
+      "desc": "Filé mignon alto, empanado e selado, coberto com molho de tomate caseiro e queijo derretido gratinado no forno. Acompanha arroz, fritas e salada. Versão generosa do parmegiana tradicional, preparada sob pedido.",
+      "whatsapp": "5516332999750",
+      "whatsapp_verificado": false,
+      "google_rating": 4.8,
+      "google_reviews": 534,
+      "google_maps_uri": "https://www.google.com/maps/place/Picanha+e+Peixe+na+Brasa+%7C+Restaurante+em+Ribeir%C3%A3o+Preto/@-21.1803076,-47.7931558,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bf57a73ef747:0x6702a27cbf124e38!8m2!3d-21.1803076!4d-47.7905809!16s%2Fg%2F11f6g2yc08",
+      "fotos": [
+        "fotos/rest_09_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Feyza Yıldırım",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/um-prato-de-comida-com-carne-e-brocolis-HhEfe0DeMiA"
+      },
+      "_observacao_levantamento": "Usa fixo como WA Business. Retornado null."
+    },
+    {
+      "id": 10,
+      "nome": "MadreMia Restaurante",
+      "endereco": "R. João Penteado, 1835, Jardim América, Ribeirão Preto, SP",
+      "area": "Jardim América",
+      "prato": "Espaguete Negro com Camarão",
+      "tag": "Peixes",
+      "cuisine": "Italiana",
+      "desc": "Espaguete artesanal tingido com tinta de lula, envolvido em camarões rosa selados no alho e azeite. Leve toque de pimenta calabresa e salsinha fresca. Apresentação marcante, sabor do mar equilibrado com a massa.",
+      "whatsapp": "5516996126790",
+      "whatsapp_verificado": true,
+      "google_rating": 4.8,
+      "google_reviews": 306,
+      "google_maps_uri": "https://www.google.com/maps/place/MadreMia+Restaurante/@-21.1917244,-47.8061022,17z/data=!3m1!4b1!4m6!3m5!1s0x94b9bf747cb9f9e1:0x2cd82b66e88f8736!8m2!3d-21.1917244!4d-47.8035273!16s%2Fg%2F11t_rws7r7",
+      "fotos": [
+        "fotos/rest_10_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "autor": "Krisztina Papp",
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/pt-br/fotografias/prato-de-macarrao-lnWeBWM7__U"
+      }
+    }
+  ]
+}

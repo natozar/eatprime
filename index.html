@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Curadoria premium dos melhores restaurantes de Ribeirão Preto. Sem taxas, sem intermediários." />
+  <meta name="theme-color" content="#0b0b0f" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>EatPrime · Curadoria premium de Ribeirão Preto</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="EatPrime" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------------------------------------------------------------
+       VARIÁVEIS — paleta EatPrime
+       --------------------------------------------------------------- */
+    :root {
+      --bg:        #0b0b0f;
+      --surface:   #1c1c28;
+      --surface-2: #23232f;
+      --gold:      #c9a646;
+      --gold-soft: #d9ba6b;
+      --gold-dim:  #8a7132;
+      --text:      #efeae0;
+      --text-dim:  #a09a8e;
+      --border:    rgba(201, 166, 70, 0.18);
+      --whatsapp:  #25D366;
+      --whatsapp-dark: #1ebe5a;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.55), 0 2px 10px rgba(0,0,0,0.3);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ---------------------------------------------------------------
+       RESET / BASE
+       --------------------------------------------------------------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Fundo sutil com gradiente */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(201, 166, 70, 0.06), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(201, 166, 70, 0.03), transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ---------------------------------------------------------------
+       HEADER
+       --------------------------------------------------------------- */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 11, 15, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header__inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--bg);
+      letter-spacing: -0.02em;
+      box-shadow: 0 4px 14px rgba(201, 166, 70, 0.25);
+    }
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .brand__eat  { color: var(--text); }
+    .brand__prime { color: var(--gold); font-style: italic; }
+    .tagline {
+      margin-left: auto;
+      color: var(--text-dim);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 640px) {
+      .tagline { display: none; }
+    }
+
+    /* ---------------------------------------------------------------
+       HERO
+       --------------------------------------------------------------- */
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 22px 40px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(201, 166, 70, 0.1);
+      border: 1px solid var(--border);
+      color: var(--gold-soft);
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold);
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 26px 0 18px;
+      color: var(--text);
+    }
+    .hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 600;
+    }
+    .hero p {
+      color: var(--text-dim);
+      font-size: clamp(15px, 2vw, 17px);
+      max-width: 620px;
+      margin: 0 auto 26px;
+      line-height: 1.6;
+    }
+    .meta-bullets {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+    .meta-bullets span { display: inline-flex; align-items: center; }
+    .meta-bullets span + span::before {
+      content: '·';
+      margin-right: 22px;
+      color: var(--gold-dim);
+    }
+    @media (max-width: 520px) {
+      .meta-bullets { flex-direction: column; gap: 4px; }
+      .meta-bullets span + span::before { display: none; }
+    }
+
+    /* ---------------------------------------------------------------
+       FILTROS
+       --------------------------------------------------------------- */
+    .filters {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 10px auto 0;
+      padding: 0 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .chip {
+      padding: 9px 18px;
+      border-radius: 100px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.25s var(--ease);
+    }
+    .chip:hover {
+      color: var(--text);
+      border-color: rgba(201, 166, 70, 0.35);
+    }
+    .chip.is-active {
+      background: var(--gold);
+      color: var(--bg);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ---------------------------------------------------------------
+       GRID DE CARDS
+       --------------------------------------------------------------- */
+    .grid {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 36px auto 80px;
+      padding: 0 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 26px;
+    }
+    .card {
+      position: relative;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(201, 166, 70, 0.35);
+    }
+    .card:hover .card__photo img { transform: scale(1.06); }
+
+    .card__photo {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2a2a38 0%, #1a1a24 100%);
+    }
+    .card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease);
+    }
+    .card__photo-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-size: 140px;
+      color: var(--gold);
+      opacity: 0.22;
+      letter-spacing: -0.04em;
+    }
+    .card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 5px 11px;
+      background: rgba(11, 11, 15, 0.78);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      font-weight: 500;
+    }
+    .card__body {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card__cuisine {
+      color: var(--gold);
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card__dish {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+    .card__desc {
+      color: var(--text-dim);
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card__divider {
+      height: 1px;
+      background: var(--border);
+      margin: auto 0 14px;
+    }
+    .card__rest {
+      font-size: 13.5px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .card__area {
+      color: var(--text-dim);
+      font-size: 12.5px;
+      margin-top: 2px;
+    }
+    .card__rating {
+      color: var(--gold-soft);
+      font-size: 12px;
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ---------------------------------------------------------------
+       MODAL
+       --------------------------------------------------------------- */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 8, 0.78);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 30px 18px;
+      overflow-y: auto;
+      animation: fadeIn 0.3s var(--ease);
+    }
+    .modal-backdrop.is-open { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .modal {
+      position: relative;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      max-width: 620px;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      animation: slideUp 0.4s var(--ease);
+      margin: auto 0;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .modal__photo {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, #2a2a38 0%, #1a1a24 100%);
+      overflow: hidden;
+    }
+    .modal__photo img { width: 100%; height: 100%; object-fit: cover; }
+    .modal__close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(11, 11, 15, 0.82);
+      backdrop-filter: blur(8px);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      border: 1px solid var(--border);
+      transition: all 0.2s var(--ease);
+    }
+    .modal__close:hover { background: var(--bg); color: var(--gold); }
+    .modal__body { padding: 26px 28px 28px; }
+    .modal__cuisine {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .modal__dish {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+    }
+    .modal__desc {
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.65;
+      margin: 0 0 22px;
+    }
+    .modal__rest-box {
+      padding: 16px 18px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 18px;
+    }
+    .modal__rest-name {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .modal__rest-addr {
+      color: var(--text-dim);
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+    .modal__rating {
+      color: var(--gold-soft);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: all 0.25s var(--ease);
+      margin-bottom: 10px;
+    }
+    .btn svg { width: 18px; height: 18px; }
+    .btn--gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+      color: var(--bg);
+    }
+    .btn--gold:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(201, 166, 70, 0.35); }
+    .btn--whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+    .btn--whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+
+    /* ---------------------------------------------------------------
+       FOOTER
+       --------------------------------------------------------------- */
+    .footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 40px 22px 50px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 12.5px;
+      line-height: 1.65;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .footer__logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .footer__logo .logo { width: 28px; height: 28px; font-size: 16px; }
+    .footer__logo .brand { font-size: 17px; }
+    .footer p { margin: 0; }
+
+    /* ---------------------------------------------------------------
+       EMPTY STATE
+       --------------------------------------------------------------- */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-dim);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =================================================================
+       HEADER
+       ================================================================= -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="logo">E</div>
+      <div class="brand">
+        <span class="brand__eat" id="brand-eat">Eat</span><span class="brand__prime" id="brand-prime">Prime</span>
+      </div>
+      <div class="tagline">Ribeirão Preto · Curadoria premium</div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       HERO
+       ================================================================= -->
+  <section class="hero">
+    <span class="eyebrow">Sem taxas · Sem intermediários</span>
+    <h1>Os pratos que valem <em>uma mesa reservada.</em></h1>
+    <p>Uma curadoria dos restaurantes premium de Ribeirão Preto. Contato direto com a cozinha, sem aplicativos que cobram taxa do seu prato.</p>
+    <div class="meta-bullets">
+      <span>10 restaurantes selecionados</span>
+      <span>Zero dark kitchen</span>
+      <span>Contato direto com a cozinha</span>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       FILTROS
+       ================================================================= -->
+  <div class="filters" id="filters">
+    <button class="chip is-active" data-tag="Todos">Todos</button>
+    <button class="chip" data-tag="Carnes">Carnes</button>
+    <button class="chip" data-tag="Italiana">Italiana</button>
+    <button class="chip" data-tag="Peixes">Peixes</button>
+  </div>
+
+  <!-- =================================================================
+       GRID
+       ================================================================= -->
+  <main class="grid" id="grid"></main>
+
+  <!-- =================================================================
+       MODAL
+       ================================================================= -->
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <!-- =================================================================
+       FOOTER
+       ================================================================= -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <div class="logo">E</div>
+      <div class="brand">
+        <span class="brand__eat">Eat</span><span class="brand__prime">Prime</span>
+      </div>
+    </div>
+    <p id="footer-disclaimer">
+      Curadoria independente dos restaurantes premium de Ribeirão Preto.
+      Informações coletadas de fontes públicas. Restaurantes sem vínculo comercial oficial com a plataforma.
+      Dono do estabelecimento? Reivindique seu perfil.
+    </p>
+  </footer>
+
+  <script>
+    /* =================================================================
+       EATPRIME — MVP PWA
+       ================================================================= */
+
+    // Nome da marca num único lugar. Troque aqui e propaga em toda a UI.
+    const BRAND = "EatPrime";
+    // Ponto onde o nome quebra entre branco e dourado.
+    // Ex: BRAND="EatPrime" + BRAND_SPLIT=3 → "Eat" branco, "Prime" dourado.
+    // Se trocar BRAND, ajuste aqui também.
+    const BRAND_SPLIT = 3;
+
+    // Estado da app
+    let restaurantes = [];
+    let filtroAtivo = "Todos";
+    let erroCarregamento = false;
+
+    // ---------------------------------------------------------------
+    // BOOT
+    // ---------------------------------------------------------------
+    document.addEventListener("DOMContentLoaded", async () => {
+      aplicarBrand();
+      configurarFiltros();
+      configurarModal();
+      await carregarDados();
+      renderizar();
+      registrarSW();
+    });
+
+    // Substitui texto da marca caso BRAND mude
+    function aplicarBrand() {
+      document.title = `${BRAND} · Curadoria premium de Ribeirão Preto`;
+      // Usa BRAND_SPLIT — evita presumir prefixo "Eat" e quebrar se BRAND mudar
+      const ponto = Math.max(1, Math.min(BRAND_SPLIT, BRAND.length - 1));
+      document.getElementById("brand-eat").textContent = BRAND.slice(0, ponto);
+      document.getElementById("brand-prime").textContent = BRAND.slice(ponto);
+    }
+
+    // ---------------------------------------------------------------
+    // CARREGA JSON
+    // Se falhar (ex: abriu com duplo clique via file://), mostra mensagem
+    // honesta pedindo pra rodar um servidor local — preferível a silenciar
+    // com dados duplicados que podem divergir do JSON oficial.
+    // ---------------------------------------------------------------
+    async function carregarDados() {
+      try {
+        const resp = await fetch("restaurantes_dados.json", { cache: "no-store" });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const dados = await resp.json();
+        restaurantes = dados.restaurantes || [];
+      } catch (e) {
+        console.warn("Não consegui carregar restaurantes_dados.json.", e);
+        erroCarregamento = true;
+        restaurantes = [];
+      }
+    }
+
+    // ---------------------------------------------------------------
+    // RENDER
+    // ---------------------------------------------------------------
+    function renderizar() {
+      const grid = document.getElementById("grid");
+
+      if (erroCarregamento) {
+        grid.innerHTML = `
+          <div class="empty">
+            Não consegui carregar os dados.<br><br>
+            Se você abriu o arquivo com duplo clique, feche e rode no terminal:<br>
+            <code style="color:var(--gold)">python -m http.server 8000</code><br>
+            depois abra <code style="color:var(--gold)">http://localhost:8000</code>.
+          </div>
+        `;
+        return;
+      }
+
+      const lista = filtroAtivo === "Todos"
+        ? restaurantes
+        : restaurantes.filter(r => r.tag === filtroAtivo);
+
+      if (lista.length === 0) {
+        grid.innerHTML = `<div class="empty">Nada por aqui nessa categoria ainda.</div>`;
+        return;
+      }
+
+      grid.innerHTML = lista.map(r => cardHTML(r)).join("");
+
+      // Bind de clique em cada card
+      grid.querySelectorAll(".card").forEach(el => {
+        el.addEventListener("click", () => {
+          const id = Number(el.dataset.id);
+          const rest = restaurantes.find(x => x.id === id);
+          abrirModal(rest);
+        });
+      });
+    }
+
+    function cardHTML(r) {
+      const foto = r.fotos && r.fotos[0] ? r.fotos[0] : "";
+      const inicial = (r.prato || "?").charAt(0).toUpperCase();
+      const ratingHTML = r.google_rating
+        ? `<div class="card__rating">★ ${r.google_rating.toFixed(1)}${r.google_reviews ? ` · ${r.google_reviews} avaliações` : ""}</div>`
+        : "";
+      return `
+        <article class="card" data-id="${r.id}">
+          <div class="card__photo">
+            ${foto ? `<img src="${foto}" alt="${escapar(r.prato)}" loading="lazy" onerror="this.style.display='none'">` : ""}
+            <div class="card__photo-fallback" aria-hidden="true">${inicial}</div>
+            <span class="card__badge">${escapar(r.tag)}</span>
+          </div>
+          <div class="card__body">
+            <div class="card__cuisine">${escapar(r.cuisine)}</div>
+            <h2 class="card__dish">${escapar(r.prato)}</h2>
+            <p class="card__desc">${escapar(r.desc)}</p>
+            <div class="card__divider"></div>
+            <div class="card__rest">${escapar(r.nome)}</div>
+            <div class="card__area">${escapar(r.area || "Ribeirão Preto")}</div>
+            ${ratingHTML}
+          </div>
+        </article>
+      `;
+    }
+
+    // ---------------------------------------------------------------
+    // FILTROS
+    // ---------------------------------------------------------------
+    function configurarFiltros() {
+      const chips = document.querySelectorAll("#filters .chip");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("is-active"));
+          chip.classList.add("is-active");
+          filtroAtivo = chip.dataset.tag;
+          renderizar();
+        });
+      });
+    }
+
+    // ---------------------------------------------------------------
+    // MODAL
+    // ---------------------------------------------------------------
+    function configurarModal() {
+      const modal = document.getElementById("modal");
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) fecharModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") fecharModal();
+      });
+    }
+
+    function abrirModal(r) {
+      if (!r) return;
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modal-content");
+      const foto = r.fotos && r.fotos[0] ? r.fotos[0] : "";
+      const inicial = (r.prato || "?").charAt(0).toUpperCase();
+
+      // Maps link — usa google_maps_uri se tiver; senão, fallback por endereço
+      const mapsURL = r.google_maps_uri
+        ? r.google_maps_uri
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.nome + " " + (r.endereco || ""))}`;
+
+      // WhatsApp link (só se verificado)
+      const msg = `Olá! Encontrei vocês pelo ${BRAND} e gostaria de pedir/reservar o ${r.prato}.`;
+      const waURL = `https://wa.me/${r.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+      const ratingHTML = r.google_rating
+        ? `<div class="modal__rating">★ ${r.google_rating.toFixed(1)}${r.google_reviews ? ` · ${r.google_reviews} avaliações no Google` : ""}</div>`
+        : "";
+
+      // Botão WhatsApp só aparece se o número foi verificado
+      const botaoWA = r.whatsapp && r.whatsapp_verificado
+        ? `<a class="btn btn--whatsapp" href="${waURL}" target="_blank" rel="noopener">
+             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+             </svg>
+             Falar no WhatsApp
+           </a>`
+        : "";
+
+      content.innerHTML = `
+        <button class="modal__close" aria-label="Fechar" onclick="fecharModal()">✕</button>
+        <div class="modal__photo">
+          ${foto ? `<img src="${foto}" alt="${escapar(r.prato)}" onerror="this.style.display='none'">` : ""}
+          <div class="card__photo-fallback" aria-hidden="true">${inicial}</div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__cuisine">${escapar(r.cuisine)}</div>
+          <h2 class="modal__dish">${escapar(r.prato)}</h2>
+          <p class="modal__desc">${escapar(r.desc)}</p>
+          <div class="modal__rest-box">
+            <div class="modal__rest-name">${escapar(r.nome)}</div>
+            <div class="modal__rest-addr">${escapar(r.endereco || "")}</div>
+            ${ratingHTML}
+          </div>
+          <a class="btn btn--gold" href="${mapsURL}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            Me leve até lá
+          </a>
+          ${botaoWA}
+        </div>
+      `;
+      modal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+    window.fecharModal = fecharModal; // pro botão inline
+
+    // ---------------------------------------------------------------
+    // UTILS
+    // ---------------------------------------------------------------
+    function escapar(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    // ---------------------------------------------------------------
+    // SERVICE WORKER
+    // ---------------------------------------------------------------
+    function registrarSW() {
+      if ("serviceWorker" in navigator && location.protocol !== "file:") {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      }
+    }
+  </script>
+</body>
+</html>

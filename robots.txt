@@ -1,0 +1,5 @@
+# EatPrime · protótipo interno
+# Bloqueado pra indexação até termos consentimento dos restaurantes listados.
+# Quando formos ao ar público, remover este bloqueio.
+User-agent: *
+Disallow: /

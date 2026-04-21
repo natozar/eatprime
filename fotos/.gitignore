@@ -1,0 +1,6 @@
+# Bloqueia qualquer foto baixada do Google Places (ToS)
+# Só fotos próprias ou com consentimento entram no repo.
+rest_*_google_*.jpg
+rest_*_google_*.jpeg
+rest_*_google_*.png
+rest_*_google_*.webp

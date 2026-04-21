@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Credenciais — NUNCA comitar
+.env
+.env.local
+*.key
+credentials.json
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Documentos internos — não publicar
+CLAUDE.md
+COMO_USAR.md
+
+# Artefatos de teste automatizado (Playwright / Lighthouse)
+smoke-*.png
+final-*.png
+.playwright-mcp/
+
+# Fotos baixadas do Google Places (ToS proíbe publicar)
+# Padrão: rest_XX_google_Y.jpg vem do coletar_dados.py --fotos-google
+fotos/rest_*_google_*.jpg
