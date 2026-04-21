@@ -1,6 +1,6 @@
 {
   "versao": "1.1.0-navegador",
-  "gerado_em": "2026-04-21T17:12:14",
+  "gerado_em": "2026-04-21T19:15:36",
   "fonte": "Extensão do Claude no navegador (Google Maps + Instagram + Unsplash/Pexels)",
   "cidade": "Ribeirão Preto - SP",
   "restaurantes": [
@@ -241,6 +241,93 @@
         "fonte": "Unsplash",
         "url": "https://unsplash.com/pt-br/fotografias/prato-de-macarrao-lnWeBWM7__U"
       }
+    },
+    {
+      "id": 11,
+      "nome": "Mirai Restaurante Japonês",
+      "endereco": "Av. Prof. João Fiusa, 2040, Jardim Canadá, Ribeirão Preto, SP",
+      "area": "Jardim Canadá",
+      "prato": "Combinado Premium de Sashimis",
+      "tag": "Japonesa",
+      "cuisine": "Japonesa",
+      "desc": "Seleção do dia com peixes frescos cortados à faca pelo sushiman, acompanhados de shoyu artesanal e wasabi fresco. Salmão de textura sedosa e atum de coloração intensa marcam a casa, referência em gastronomia oriental no interior paulista desde 1995.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.4,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "fotos": [
+        "fotos/rest_11_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "site oficial mirairestaurante.com.br",
+        "observacao": "Foto oficial usada em contexto de protótipo."
+      },
+      "_origem_prospector": {
+        "fonte": "gemini + verificado em tripadvisor/site oficial",
+        "confianca": "alta",
+        "fundado_em": 1995,
+        "descoberto_em": "2026-04-21T19:00:00"
+      },
+      "_publicado_em": "2026-04-21T19:15:36"
+    },
+    {
+      "id": 12,
+      "nome": "Le Petit Bistrot",
+      "endereco": "R. Thomaz Nogueira Gaia, 1116, Jardim Irajá, Ribeirão Preto, SP",
+      "area": "Jardim Irajá",
+      "prato": "Filet au Poivre Vert",
+      "tag": "Francesa",
+      "cuisine": "Bistrô Francês",
+      "desc": "Filé mignon ao molho de pimenta verde em grãos, flambado em conhaque, servido com vegetais salteados em manteiga e ervas. A cozinha francesa clássica em sua forma mais essencial — técnica precisa, ingrediente nobre, ausência de ornamento desnecessário.",
+      "whatsapp": "5516981280645",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "fotos": [
+        "fotos/rest_12_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "duogourmet.com.br (cover oficial do restaurante)",
+        "observacao": "Foto oficial usada em contexto de protótipo."
+      },
+      "_origem_prospector": {
+        "fonte": "gemini + verificado em tripadvisor/facebook/guiadasemana",
+        "confianca": "alta",
+        "fundado_em": 2005,
+        "descoberto_em": "2026-04-21T19:00:00"
+      },
+      "_publicado_em": "2026-04-21T19:15:36"
+    },
+    {
+      "id": 13,
+      "nome": "O Pastifício",
+      "endereco": "R. Sete de Setembro, 1620, Jardim Sumaré, Ribeirão Preto, SP",
+      "area": "Jardim Sumaré",
+      "prato": "Ravióli de Cordeiro ao Burro e Salvia",
+      "tag": "Italiana",
+      "cuisine": "Massas Artesanais",
+      "desc": "Massa fresca recheada com ragu de cordeiro desfiado lentamente, envolvida em manteiga derretida perfumada com folhas de sálvia crocantes e parmesão envelhecido. Feita a cada manhã com farinha italiana e ovos caipiras — tradição que Gabriel Nogueira trouxe da Itália em 2014.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "fotos": [
+        "fotos/rest_13_foto_1.png"
+      ],
+      "foto_credito": {
+        "fonte": "site oficial opastificio.com",
+        "observacao": "Foto oficial usada em contexto de protótipo."
+      },
+      "_origem_prospector": {
+        "fonte": "gemini + verificado em site oficial opastificio.com",
+        "confianca": "alta",
+        "fundado_em": 2014,
+        "descoberto_em": "2026-04-21T19:00:00"
+      },
+      "_publicado_em": "2026-04-21T19:15:36"
     }
   ]
 }

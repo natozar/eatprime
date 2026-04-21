@@ -1,0 +1,108 @@
+{
+  "gerado_em": "2026-04-21T19:00:00",
+  "fonte": "Agente Prospector (Gemini) + verificação web manual",
+  "cidade": "Ribeirão Preto - SP",
+  "total_candidatos": 4,
+  "total_descartados": 8,
+  "observacao": "12 sugestões do Gemini passaram por verificação via WebSearch. 4 confirmadas com presença web sólida e dados enriquecidos. 8 rejeitadas por nome alucinado, localização incorreta ou sem presença confirmável.",
+  "candidatos": [
+    {
+      "nome": "Mirai Restaurante Japonês",
+      "endereco": "Av. Prof. João Fiusa, 2040, Jardim Canadá, Ribeirão Preto, SP",
+      "area": "Jardim Canadá",
+      "prato": "Combinado Premium de Sashimis",
+      "tag": "Japonesa",
+      "cuisine": "Japonesa",
+      "desc": "Seleção do dia com peixes frescos cortados à faca pelo sushiman, acompanhados de shoyu artesanal e wasabi fresco. Salmão de textura sedosa e atum de coloração intensa marcam a casa, referência em gastronomia oriental no interior paulista desde 1995.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.4,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3624-0530",
+      "fotos": [],
+      "_origem": {
+        "fonte": "gemini + verificado em tripadvisor/site oficial",
+        "confianca": "alta",
+        "fundado_em": 1995,
+        "descoberto_em": "2026-04-21T19:00:00"
+      }
+    },
+    {
+      "nome": "Le Petit Bistrot",
+      "endereco": "R. Thomaz Nogueira Gaia, 1116, Jardim Irajá, Ribeirão Preto, SP",
+      "area": "Jardim Irajá",
+      "prato": "Filet au Poivre Vert",
+      "tag": "Francesa",
+      "cuisine": "Bistrô Francês",
+      "desc": "Filé mignon ao molho de pimenta verde em grãos, flambado em conhaque, servido com vegetais salteados em manteiga e ervas. A cozinha francesa clássica em sua forma mais essencial — técnica precisa, ingrediente nobre, ausência de ornamento desnecessário.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3911-4700",
+      "fotos": [],
+      "_origem": {
+        "fonte": "gemini + verificado em tripadvisor/facebook/guiadasemana",
+        "confianca": "alta",
+        "fundado_em": 2005,
+        "descoberto_em": "2026-04-21T19:00:00"
+      }
+    },
+    {
+      "nome": "O Pastifício",
+      "endereco": "R. Sete de Setembro, 1620, Jardim Sumaré, Ribeirão Preto, SP",
+      "area": "Jardim Sumaré",
+      "prato": "Ravióli de Cordeiro ao Burro e Salvia",
+      "tag": "Italiana",
+      "cuisine": "Massas Artesanais",
+      "desc": "Massa fresca recheada com ragu de cordeiro desfiado lentamente, envolvida em manteiga derretida perfumada com folhas de sálvia crocantes e parmesão envelhecido. Feita a cada manhã com farinha italiana e ovos caipiras — tradição que Gabriel Nogueira trouxe da Itália em 2014.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "",
+      "fotos": [],
+      "_origem": {
+        "fonte": "gemini + verificado em site oficial opastificio.com",
+        "confianca": "alta",
+        "fundado_em": 2014,
+        "descoberto_em": "2026-04-21T19:00:00"
+      }
+    },
+    {
+      "nome": "Cozinha de Lourenço",
+      "endereco": "Shopping Catuaí, Av. Pres. Kennedy, 1500, Ribeirão Preto, SP",
+      "area": "Ribeirânia",
+      "prato": "Costela Braseada com Purê Rústico",
+      "tag": "Contemporânea",
+      "cuisine": "Autoral Brasileira",
+      "desc": "Costela bovina braseada por oito horas em vinho tinto e ervas, desfia ao toque do garfo. Servida sobre purê rústico de batatas com casca, manteiga noisette e crocante de bacon defumado. Cozinha brasileira contemporânea com técnica e identidade.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "",
+      "fotos": [],
+      "_origem": {
+        "fonte": "gemini + verificado em instagram @cozinhadelourenco (49k seguidores)",
+        "confianca": "alta",
+        "fundado_em": 2014,
+        "descoberto_em": "2026-04-21T19:00:00"
+      }
+    }
+  ],
+  "descartados": [
+    {"nome": "Benedito Restaurante", "motivo": "nome alucinado (existe 'São Benedito', mas rating 4.1 não atende padrão premium)"},
+    {"nome": "Ristorante Limone", "motivo": "nome exato não encontrado (existe 'Limone & Capperi' — confirmar manualmente se quiser)"},
+    {"nome": "La Palma", "motivo": "restaurante com esse nome existe em Belo Horizonte, não em Ribeirão Preto"},
+    {"nome": "Peixaria do Comendador", "motivo": "nenhuma presença web — provável alucinação"},
+    {"nome": "Le Jardin (Mont Blanc Premium)", "motivo": "o hotel existe mas o restaurante se chama 'Restaurante Mont Blanc Premium', não 'Le Jardin'"},
+    {"nome": "Trattoria do Gino", "motivo": "nenhuma presença web — alucinação"},
+    {"nome": "Osaka Sushi", "motivo": "não existe com esse nome em Ribeirão Preto"},
+    {"nome": "Casa Grande Bistrô", "motivo": "nenhuma presença web — alucinação"}
+  ]
+}
