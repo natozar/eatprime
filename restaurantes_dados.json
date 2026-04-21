@@ -1,6 +1,6 @@
 {
-  "versao": "1.1.0-navegador",
-  "gerado_em": "2026-04-21T19:15:36",
+  "versao": "1.2.0-navegador",
+  "gerado_em": "2026-04-21T20:00:00",
   "fonte": "Extensão do Claude no navegador (Google Maps + Instagram + Unsplash/Pexels)",
   "cidade": "Ribeirão Preto - SP",
   "restaurantes": [
@@ -328,6 +328,122 @@
         "descoberto_em": "2026-04-21T19:00:00"
       },
       "_publicado_em": "2026-04-21T19:15:36"
+    },
+    {
+      "id": 14,
+      "nome": "Sushi Shimokita",
+      "endereco": "Av. Presidente Vargas, 1376, Alto da Boa Vista, Ribeirão Preto, SP",
+      "area": "Alto da Boa Vista",
+      "prato": "Rodízio Especial de Sushi",
+      "tag": "Japonesa",
+      "cuisine": "Japonesa",
+      "desc": "Rodízio com peças frescas cortadas pelo sushiman, temakis generosos, hot rolls e pratos quentes como camarão e lula na chapa. Casa lindíssima e referência em comida japonesa em Ribeirão — todos os dias no almoço e no jantar, sem taxa de serviço.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.7,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3620-1282",
+      "fotos": [],
+      "_origem_prospector": {
+        "fonte": "webSearch + tripadvisor/instagram @sushi_shimokita",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-21T20:00:00"
+      },
+      "_publicado_em": "2026-04-21T20:00:00"
+    },
+    {
+      "id": 15,
+      "nome": "Kay Asian Cuisine",
+      "endereco": "Av. Carlos Eduardo de Gasperi Consoni, 725, Ribeirão Preto, SP",
+      "area": "Vila do Golfe",
+      "prato": "Menu Degustação Kay",
+      "tag": "Japonesa",
+      "cuisine": "Asiática Contemporânea",
+      "desc": "Quinze pratos autorais em sequência — couverts, ceviche, sashimis, niguiris, vieira, camarão. Cozinha japonesa contemporânea com técnica refinada e apresentação que dialoga com as melhores mesas de São Paulo. Ostras sob disponibilidade do dia.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.8,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3421-3860",
+      "fotos": [],
+      "_origem_prospector": {
+        "fonte": "webSearch + instagram @kayasiancuisine + restaurantguru",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-21T20:00:00"
+      },
+      "_publicado_em": "2026-04-21T20:00:00"
+    },
+    {
+      "id": 16,
+      "nome": "Restaurante Mont Blanc Premium",
+      "endereco": "Av. Maurílio Biagi, 1577, Ribeirânia, Ribeirão Preto, SP",
+      "area": "Ribeirânia",
+      "prato": "Menu Executivo Premium",
+      "tag": "Contemporânea",
+      "cuisine": "Internacional",
+      "desc": "Gastronomia do hotel cinco estrelas da cidade, com foco em ingredientes nobres, técnicas clássicas francesas e serviço internacional. Ambiente refinado, carta de vinhos extensa, uma das endereços mais tradicionais para jantar de negócios em Ribeirão.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.3,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3516-6000",
+      "fotos": [],
+      "_origem_prospector": {
+        "fonte": "webSearch + tripadvisor + site oficial montblancpremium.com.br",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-21T20:00:00"
+      },
+      "_publicado_em": "2026-04-21T20:00:00"
+    },
+    {
+      "id": 17,
+      "nome": "Restaurante Jangada",
+      "endereco": "Av. Cel. Fernando Ferreira Leite, 1540, RibeirãoShopping, Ribeirão Preto, SP",
+      "area": "Jardim Califórnia",
+      "prato": "Espeto à Moda da Casa",
+      "tag": "Peixes",
+      "cuisine": "Peixes e Frutos do Mar",
+      "desc": "Marinado em tempero especial da casa e preparado no espeto desde 1964, é o clássico que atravessa gerações. Peixes frescos, preparo tradicional e uma experiência que está na memória de muitas famílias ribeirão-pretanas — uma instituição da cidade.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.5,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "",
+      "fotos": [],
+      "_origem_prospector": {
+        "fonte": "webSearch + site oficial restaurantejangada.com.br + ribeiraoshopping",
+        "confianca": "alta",
+        "fundado_em": 1964,
+        "descoberto_em": "2026-04-21T20:00:00"
+      },
+      "_publicado_em": "2026-04-21T20:00:00"
+    },
+    {
+      "id": 18,
+      "nome": "MESA por João Rangel",
+      "endereco": "R. Manoel Aché, 760, Jardim Irajá, Ribeirão Preto, SP",
+      "area": "Jardim Irajá",
+      "prato": "Menu Degustação Autoral",
+      "tag": "Contemporânea",
+      "cuisine": "Cozinha Criativa",
+      "desc": "Bistrô autoral do chef João Rangel, referência da alta gastronomia ribeirão-pretana. Cardápio que muda conforme a temporada e a inspiração do chef — cozinha criativa com coragem à mesa, reservas sempre disputadas. De terça a sábado, apenas no jantar.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.8,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "",
+      "fotos": [],
+      "_origem_prospector": {
+        "fonte": "webSearch + instagram @mesaporjoaorangel + tripadvisor",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-21T20:00:00"
+      },
+      "_publicado_em": "2026-04-21T20:00:00"
     }
   ]
 }
