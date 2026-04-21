@@ -3,7 +3,7 @@
 // IMPORTANTE: incremente CACHE_VERSION toda vez que você publicar uma mudança,
 // senão o usuário fica preso numa versão antiga.
 
-const CACHE_VERSION = "eatprime-v1.0.8";
+const CACHE_VERSION = "eatprime-v1.0.9";
 const OFFLINE_URL = "./offline.html";
 const CORE_ASSETS = [
   "./",
@@ -44,20 +44,39 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// FETCH — cache-first, com fallback pra rede e cache do que vier da rede
+// FETCH — estratégia híbrida:
+//   - JSON (dados que mudam): network-first, fallback pro cache quando offline
+//   - Resto (HTML/CSS/JS/imagens): cache-first, com update em background
 self.addEventListener("fetch", (event) => {
   const req = event.request;
-  // Só GET
   if (req.method !== "GET") return;
-  // Pula chamadas cross-origin (fontes Google, etc) — browser gerencia
   if (!req.url.startsWith(self.location.origin)) return;
 
+  const url = new URL(req.url);
+  const isJSON = url.pathname.endsWith(".json");
+
+  if (isJSON) {
+    // Network-first: busca sempre do servidor. Se offline, devolve último cache.
+    event.respondWith(
+      fetch(req)
+        .then((resp) => {
+          if (resp && resp.status === 200) {
+            const clone = resp.clone();
+            caches.open(CACHE_VERSION).then((cache) => cache.put(req, clone));
+          }
+          return resp;
+        })
+        .catch(() => caches.match(req))
+    );
+    return;
+  }
+
+  // Cache-first pro resto
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
       return fetch(req)
         .then((resp) => {
-          // Guarda cópia no cache só se for resposta boa
           if (resp && resp.status === 200 && resp.type === "basic") {
             const clone = resp.clone();
             caches.open(CACHE_VERSION).then((cache) => cache.put(req, clone));
@@ -65,7 +84,6 @@ self.addEventListener("fetch", (event) => {
           return resp;
         })
         .catch(() => {
-          // Offline: se for navegação HTML, devolve a página de offline
           if (req.mode === "navigate") {
             return caches.match(OFFLINE_URL);
           }
