@@ -3,7 +3,7 @@
 // IMPORTANTE: incremente CACHE_VERSION toda vez que você publicar uma mudança,
 // senão o usuário fica preso numa versão antiga.
 
-const CACHE_VERSION = "eatprime-v1.0.9";
+const CACHE_VERSION = "eatprime-v1.1.0";
 const OFFLINE_URL = "./offline.html";
 const CORE_ASSETS = [
   "./",
@@ -28,6 +28,13 @@ self.addEventListener("install", (event) => {
     })
   );
   self.skipWaiting();
+});
+
+// MESSAGE — recebe pedido do cliente pra pular fila de espera
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
 // ACTIVATE — limpa caches antigos

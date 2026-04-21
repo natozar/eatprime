@@ -1121,9 +1121,41 @@
     // SERVICE WORKER
     // ---------------------------------------------------------------
     function registrarSW() {
-      if ("serviceWorker" in navigator && location.protocol !== "file:") {
-        navigator.serviceWorker.register("sw.js").catch(() => {});
-      }
+      if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
+
+      // Auto-reload quando um novo SW assumir o controle.
+      // Bandeira evita loop caso o navegador dispare duas vezes.
+      let jaRecarregando = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (jaRecarregando) return;
+        jaRecarregando = true;
+        location.reload();
+      });
+
+      navigator.serviceWorker.register("sw.js").then((reg) => {
+        if (!reg) return;
+
+        // Se já houver um SW instalado esperando, ativa na hora.
+        if (reg.waiting) reg.waiting.postMessage({ type: "SKIP_WAITING" });
+
+        // Enquanto novos SWs instalam, pede pra pular a fila (skipWaiting)
+        reg.addEventListener("updatefound", () => {
+          const novo = reg.installing;
+          if (!novo) return;
+          novo.addEventListener("statechange", () => {
+            if (novo.state === "installed" && navigator.serviceWorker.controller) {
+              novo.postMessage({ type: "SKIP_WAITING" });
+            }
+          });
+        });
+
+        // Checa update quando a aba volta ao foco e na carga
+        const checar = () => { try { reg.update(); } catch (_) {} };
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "visible") checar();
+        });
+        checar();
+      }).catch(() => {});
     }
 
     // ---------------------------------------------------------------
