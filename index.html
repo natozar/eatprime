@@ -1066,8 +1066,8 @@
         ? `<div class="modal__rating">★ ${r.google_rating.toFixed(1)}${r.google_reviews ? ` · ${r.google_reviews} avaliações no Google` : ""}</div>`
         : "";
 
-      // Botão WhatsApp só aparece se o número foi verificado
-      const botaoWA = r.whatsapp && r.whatsapp_verificado
+      // Botão WhatsApp — mostra sempre que há número (protótipo de pitch).
+      const botaoWA = r.whatsapp
         ? `<a class="btn btn--whatsapp" href="${waURL}" target="_blank" rel="noopener">
              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -1076,10 +1076,9 @@
            </a>`
         : "";
 
-      // Botão Ligar — aparece quando não há WhatsApp verificado e existe telefone
-      // Prioriza telefone_google; cai no whatsapp (que às vezes é fixo via WA Business).
-      const telPuro = (r.telefone_google || r.whatsapp || "").replace(/\D/g, "");
-      const botaoLigar = telPuro && !r.whatsapp_verificado
+      // Botão Ligar — fallback: só aparece quando NÃO há WhatsApp mas há telefone.
+      const telPuro = (r.telefone_google || "").replace(/\D/g, "");
+      const botaoLigar = !r.whatsapp && telPuro
         ? `<a class="btn btn--call" href="tel:+${telPuro}">
              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
