@@ -1,6 +1,6 @@
 {
-  "versao": "1.2.0-navegador",
-  "gerado_em": "2026-04-21T20:00:00",
+  "versao": "1.2.1-navegador",
+  "gerado_em": "2026-04-21T20:25:00",
   "fonte": "Extensão do Claude no navegador (Google Maps + Instagram + Unsplash/Pexels)",
   "cidade": "Ribeirão Preto - SP",
   "restaurantes": [
@@ -344,7 +344,13 @@
       "google_reviews": null,
       "google_maps_uri": null,
       "telefone_google": "+55 16 3620-1282",
-      "fotos": [],
+      "fotos": [
+        "fotos/rest_14_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/photos/assorted-sushi-on-black-tray"
+      },
       "_origem_prospector": {
         "fonte": "webSearch + tripadvisor/instagram @sushi_shimokita",
         "confianca": "alta",
@@ -367,7 +373,13 @@
       "google_reviews": null,
       "google_maps_uri": null,
       "telefone_google": "+55 16 3421-3860",
-      "fotos": [],
+      "fotos": [
+        "fotos/rest_15_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/sashimi"
+      },
       "_origem_prospector": {
         "fonte": "webSearch + instagram @kayasiancuisine + restaurantguru",
         "confianca": "alta",
@@ -390,7 +402,13 @@
       "google_reviews": null,
       "google_maps_uri": null,
       "telefone_google": "+55 16 3516-6000",
-      "fotos": [],
+      "fotos": [
+        "fotos/rest_16_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/fine-dining"
+      },
       "_origem_prospector": {
         "fonte": "webSearch + tripadvisor + site oficial montblancpremium.com.br",
         "confianca": "alta",
@@ -413,7 +431,13 @@
       "google_reviews": null,
       "google_maps_uri": null,
       "telefone_google": "",
-      "fotos": [],
+      "fotos": [
+        "fotos/rest_17_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/seafood"
+      },
       "_origem_prospector": {
         "fonte": "webSearch + site oficial restaurantejangada.com.br + ribeiraoshopping",
         "confianca": "alta",
@@ -437,7 +461,13 @@
       "google_reviews": null,
       "google_maps_uri": null,
       "telefone_google": "",
-      "fotos": [],
+      "fotos": [
+        "fotos/rest_18_foto_1.jpg"
+      ],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/plated-fine-dining"
+      },
       "_origem_prospector": {
         "fonte": "webSearch + instagram @mesaporjoaorangel + tripadvisor",
         "confianca": "alta",
