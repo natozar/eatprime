@@ -3,7 +3,7 @@
 // IMPORTANTE: incremente CACHE_VERSION toda vez que você publicar uma mudança,
 // senão o usuário fica preso numa versão antiga.
 
-const CACHE_VERSION = "eatprime-v1.4.0";
+const CACHE_VERSION = "eatprime-v1.4.1";
 const OFFLINE_URL = "./offline.html";
 const CORE_ASSETS = [
   "./",
