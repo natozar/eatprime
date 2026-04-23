@@ -13,6 +13,18 @@ Cada restaurante aponta pra uma foto local com este padrão de nome:
     rest_08_foto_1.jpg   → Rubinho Bar e Restaurante
     rest_09_foto_1.jpg   → Picanha e Peixe na Brasa
     rest_10_foto_1.jpg   → MadreMia
+    rest_11_foto_1.jpg   → Mirai Restaurante Japonês
+    rest_12_foto_1.jpg   → Le Petit Bistrot
+    rest_13_foto_1.png   → Pervoi Osteria (substituiu O Pastifício — mesmo endereço)
+    rest_14_foto_1.jpg   → Sushi Shimokita
+    rest_15_foto_1.jpg   → Kay Asian Cuisine
+    rest_16_foto_1.jpg   → Mont Blanc Premium
+    rest_17_foto_1.jpg   → Jangada
+    rest_18_foto_1.jpg   → MESA por João Rangel
+    rest_19_foto_1.jpg   → Noipê (NOVO — precisa foto)
+    rest_20_foto_1.jpg   → La Madunina Trattoria (NOVO — precisa foto)
+    rest_21_foto_1.jpg   → Cantina Falaguasta (NOVO — precisa foto)
+    rest_22_foto_1.jpg   → Tasca Burger (NOVO — precisa foto)
 
 COMO COLOCAR AS FOTOS
 ---------------------

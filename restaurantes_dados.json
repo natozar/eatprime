@@ -1,7 +1,7 @@
 {
-  "versao": "1.2.1-navegador",
-  "gerado_em": "2026-04-21T20:25:00",
-  "fonte": "Extensão do Claude no navegador (Google Maps + Instagram + Unsplash/Pexels)",
+  "versao": "1.3.0-prospector",
+  "gerado_em": "2026-04-22T00:00:00",
+  "fonte": "Subagente prospector (webSearch + sites oficiais + tripadvisor/instagram)",
   "cidade": "Ribeirão Preto - SP",
   "restaurantes": [
     {
@@ -302,32 +302,33 @@
     },
     {
       "id": 13,
-      "nome": "O Pastifício",
+      "nome": "Pervoi Osteria",
       "endereco": "R. Sete de Setembro, 1620, Jardim Sumaré, Ribeirão Preto, SP",
       "area": "Jardim Sumaré",
-      "prato": "Ravióli de Cordeiro ao Burro e Salvia",
+      "prato": "Tagliatelle ao Ragu de Cordeiro",
       "tag": "Italiana",
-      "cuisine": "Massas Artesanais",
-      "desc": "Massa fresca recheada com ragu de cordeiro desfiado lentamente, envolvida em manteiga derretida perfumada com folhas de sálvia crocantes e parmesão envelhecido. Feita a cada manhã com farinha italiana e ovos caipiras — tradição que Gabriel Nogueira trouxe da Itália em 2014.",
-      "whatsapp": "",
+      "cuisine": "Osteria Autoral",
+      "desc": "Tagliatelle fresca feita na casa, envolvida em ragu de paleta de cordeiro cozida por horas em vinho tinto, tomate e ervas. Finalizada com pecorino envelhecido e fio de azeite extravirgem. Cozinha italiana autoral do chef Rodrigo Francelin, com carta de vinhos assinada por sommelier — osteria em clima intimista, exclusiva para o jantar de meio de semana.",
+      "whatsapp": "5516996418420",
       "whatsapp_verificado": false,
       "google_rating": null,
       "google_reviews": null,
       "google_maps_uri": null,
+      "telefone_google": "+55 16 99641-8420",
       "fotos": [
         "fotos/rest_13_foto_1.png"
       ],
       "foto_credito": {
-        "fonte": "site oficial opastificio.com",
-        "observacao": "Foto oficial usada em contexto de protótipo."
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/tagliatelle"
       },
       "_origem_prospector": {
-        "fonte": "gemini + verificado em site oficial opastificio.com",
+        "fonte": "webSearch + pervoiosteria.com + instagram @pervoiosteria.ribeiraopreto + Tripadvisor + Revide",
         "confianca": "alta",
-        "fundado_em": 2014,
-        "descoberto_em": "2026-04-21T19:00:00"
+        "descoberto_em": "2026-04-22T00:00:00",
+        "observacao": "Substituiu O Pastifício (mesmo endereço oficial R. Sete de Setembro, 1620). Conferir no local se ambos operam no mesmo ponto com conceitos diferentes — se sim, vale readicionar O Pastifício com endereço real separado."
       },
-      "_publicado_em": "2026-04-21T19:15:36"
+      "_publicado_em": "2026-04-22T00:00:00"
     },
     {
       "id": 14,
@@ -474,6 +475,115 @@
         "descoberto_em": "2026-04-21T20:00:00"
       },
       "_publicado_em": "2026-04-21T20:00:00"
+    },
+    {
+      "id": 19,
+      "nome": "Noipê",
+      "endereco": "Av. Luiz Eduardo Toledo Prado, 1000, Bonfim Paulista, Ribeirão Preto, SP",
+      "area": "Bonfim Paulista",
+      "prato": "Burrata da Casa",
+      "tag": "Contemporânea",
+      "cuisine": "Autoral Brasileira",
+      "desc": "Burrata produzida na própria casa, servida fresca sobre tomates confitados, folhas amargas e pão de fermentação natural assado no forno à lenha. O chef Guilherme Rodrigues trabalha fermentação, maturação e produção artesanal de charcutaria, cervejas e massas. Cozinha contemporânea com sotaque brasileiro em meio a um jardim de ipês.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": 4.5,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 3289-9242",
+      "fotos": ["fotos/rest_19_foto_1.jpg"],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/burrata"
+      },
+      "_origem_prospector": {
+        "fonte": "webSearch + noipe.com.br + instagram @noiperestaurante + Farofa Magazine",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-22T00:00:00"
+      },
+      "_publicado_em": "2026-04-22T00:00:00"
+    },
+    {
+      "id": 20,
+      "nome": "La Madunina Trattoria",
+      "endereco": "R. Dr. Paulo Barra, 537, Alto da Boa Vista, Ribeirão Preto, SP",
+      "area": "Alto da Boa Vista",
+      "prato": "Ravióli de Costela",
+      "tag": "Italiana",
+      "cuisine": "Trattoria",
+      "desc": "Ravióli fresco recheado com costela bovina desfiada, cozida lentamente em molho rústico de tomate e ervas. Massa aberta à mão todos os dias, com ponto firme e textura sedosa. Receita de família da trattoria que chegou a Ribeirão vinda da tradição do Bixiga paulistano — referência da cozinha italiana não-Santini na cidade.",
+      "whatsapp": "5516997743225",
+      "whatsapp_verificado": false,
+      "google_rating": 4.7,
+      "google_reviews": 1436,
+      "google_maps_uri": null,
+      "telefone_google": "+55 16 99774-3225",
+      "fotos": ["fotos/rest_20_foto_1.jpg"],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/ravioli"
+      },
+      "_origem_prospector": {
+        "fonte": "webSearch + lamaduninatrattoria.com.br + tripadvisor #12/808 + restaurantguru",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-22T00:00:00"
+      },
+      "_publicado_em": "2026-04-22T00:00:00"
+    },
+    {
+      "id": 21,
+      "nome": "Cantina Falaguasta",
+      "endereco": "Av. Prof. João Fiúsa, 535, Jardim São Luiz, Ribeirão Preto, SP",
+      "area": "Jardim São Luiz",
+      "prato": "Queijão Provolone Inteiro",
+      "tag": "Italiana",
+      "cuisine": "Cantina Italiana",
+      "desc": "Peça inteira de provolone defumado, derretida à mesa e servida com pão rústico e geleias da casa — carro-chefe do rodízio italiano comandado pelo chef Adriano Rondinelli. Segue ilha de massas frescas feitas no dia, polpetone ao forno, risotos e carnes nobres. A nova cantina da João Fiúsa nasceu com ambição de trazer tradição italiana de verdade a Ribeirão.",
+      "whatsapp": "",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "",
+      "fotos": ["fotos/rest_21_foto_1.jpg"],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/provolone"
+      },
+      "_origem_prospector": {
+        "fonte": "webSearch + cantinafalaguasta.com.br + Portal Zumm + Duo Gourmet",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-22T00:00:00"
+      },
+      "_publicado_em": "2026-04-22T00:00:00"
+    },
+    {
+      "id": 22,
+      "nome": "Tasca Burger",
+      "endereco": "R. São José, 1483, Jardim Sumaré, Ribeirão Preto, SP",
+      "area": "Jardim Sumaré",
+      "prato": "Angus 160g no Brioche",
+      "tag": "Carnes",
+      "cuisine": "Hamburgueria Premium",
+      "desc": "Blend 100% Angus de 160g selado na chapa, montado em pão brioche artesanal com american cheese derretido e maionese branca da casa com toque defumado. Ponto caprichado, proporção calibrada entre carne, queijo e pão. Ambiente de bar gastronômico — endereço da cidade para quem entende de burger autoral.",
+      "whatsapp": "551736009807",
+      "whatsapp_verificado": false,
+      "google_rating": null,
+      "google_reviews": null,
+      "google_maps_uri": null,
+      "telefone_google": "+55 17 3600-9807",
+      "fotos": ["fotos/rest_22_foto_1.jpg"],
+      "foto_credito": {
+        "fonte": "Unsplash",
+        "url": "https://unsplash.com/s/photos/burger"
+      },
+      "_origem_prospector": {
+        "fonte": "webSearch + tascaburger.com.br + facebook @tascaburger + iFood + Duo Gourmet",
+        "confianca": "alta",
+        "descoberto_em": "2026-04-22T00:00:00",
+        "observacao": "WhatsApp Business oficial (17) 3600-9807 confirmado em site oficial e iFood — DDD 17 é correto, apesar de Ribeirão ser 16."
+      },
+      "_publicado_em": "2026-04-22T00:00:00"
     }
   ]
 }
