@@ -493,8 +493,9 @@
       "telefone_google": "+55 16 3289-9242",
       "fotos": ["fotos/rest_19_foto_1.jpg"],
       "foto_credito": {
-        "fonte": "Unsplash",
-        "url": "https://unsplash.com/s/photos/burrata"
+        "fonte": "loremflickr.com (Flickr CC)",
+        "url": "https://loremflickr.com/1200/900/burrata,cheese,tomato",
+        "observacao": "Placeholder temático — protótipo interno. Trocar por foto oficial quando restaurante autorizar."
       },
       "_origem_prospector": {
         "fonte": "webSearch + noipe.com.br + instagram @noiperestaurante + Farofa Magazine",
@@ -520,8 +521,9 @@
       "telefone_google": "+55 16 99774-3225",
       "fotos": ["fotos/rest_20_foto_1.jpg"],
       "foto_credito": {
-        "fonte": "Unsplash",
-        "url": "https://unsplash.com/s/photos/ravioli"
+        "fonte": "loremflickr.com (Flickr CC)",
+        "url": "https://loremflickr.com/1200/900/tagliatelle,bolognese",
+        "observacao": "Placeholder temático (tagliatelle ao ragu) — protótipo interno. Trocar por foto oficial do ravióli de costela quando restaurante autorizar."
       },
       "_origem_prospector": {
         "fonte": "webSearch + lamaduninatrattoria.com.br + tripadvisor #12/808 + restaurantguru",
@@ -547,8 +549,9 @@
       "telefone_google": "",
       "fotos": ["fotos/rest_21_foto_1.jpg"],
       "foto_credito": {
-        "fonte": "Unsplash",
-        "url": "https://unsplash.com/s/photos/provolone"
+        "fonte": "loremflickr.com (Flickr CC — pedro_cerqueira)",
+        "url": "https://loremflickr.com/1200/900/fondue,cheese",
+        "observacao": "Placeholder temático (queijo derretido esticando no garfo, sensação próxima do queijão provolone à mesa) — protótipo interno. Trocar por foto oficial quando restaurante autorizar."
       },
       "_origem_prospector": {
         "fonte": "webSearch + cantinafalaguasta.com.br + Portal Zumm + Duo Gourmet",
@@ -574,8 +577,9 @@
       "telefone_google": "+55 17 3600-9807",
       "fotos": ["fotos/rest_22_foto_1.jpg"],
       "foto_credito": {
-        "fonte": "Unsplash",
-        "url": "https://unsplash.com/s/photos/burger"
+        "fonte": "foodish-api.com (CC)",
+        "url": "https://foodish-api.com/images/burger/burger3.jpg",
+        "observacao": "Placeholder temático — protótipo interno. Trocar por foto oficial do Angus 160g quando restaurante autorizar."
       },
       "_origem_prospector": {
         "fonte": "webSearch + tascaburger.com.br + facebook @tascaburger + iFood + Duo Gourmet",
